@@ -4,7 +4,7 @@ import Image from "next/image";
 import Header from "./Header";
 import DashboardTitle from "./header-components/DashboardTitle";
 import Avatar from "./ui-components/Avatar";
-import Teams from "./header-components/Teams";
+import Teams from "./Teams";
 import IconAndTitleText from "./ui-components/IconAndTitleText";
 import HeadingLevelThreeText from "./typography/HeadingLevelThree";
 import Shortcut from "./ui-components/Shortcut";
