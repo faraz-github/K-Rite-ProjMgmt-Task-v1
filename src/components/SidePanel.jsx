@@ -15,8 +15,9 @@ import { FaBezierCurve } from "react-icons/fa";
 import { FaCode } from "react-icons/fa";
 import { FaPlusSquare } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
+import Folders from "./Folders";
 
-const FlexDivCenterSpaceBetween = styled.div`
+export const FlexDivCenterSpaceBetween = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,7 +35,7 @@ const SidePanelContainer = styled.div`
   padding: var(--padding);
 
   @media screen and (max-width: 600px) {
-    width: 40%;
+    width: 60%;
     position: absolute;
     height: 100%;
     margin: 0;
@@ -80,7 +81,7 @@ const SidePanel = ({ isOpen }) => {
         </Teams>
         <Teams padding="8px" dimmed>
           <IconAndTitleText>
-            <FaPlusSquare />
+            <FaPlusSquare color="var(--dimmed)" />
             <HeadingLevelThreeText dimmed>Create a team</HeadingLevelThreeText>
           </IconAndTitleText>
         </Teams>
@@ -91,6 +92,7 @@ const SidePanel = ({ isOpen }) => {
           <FaPlus color="var(--dimmed)" />
         </IconOnlyButton>
       </FlexDivCenterSpaceBetween>
+      <Folders />
     </SidePanelContainer>
   );
 };

@@ -6,6 +6,7 @@ const IconAndTitleTextContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  color: var(--heading-font-color);
 `;
 
 const IconAndTitleText = ({ children }) => {

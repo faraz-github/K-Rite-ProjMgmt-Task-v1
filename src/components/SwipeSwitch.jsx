@@ -5,7 +5,7 @@ import { useSwipeable } from "react-swipeable";
 const SwipeSwitchContainer = styled.div`
   display: "none";
   position: absolute;
-  width: 20%;
+  width: 70%;
   left: 0;
   top: 0;
   height: 100%;
