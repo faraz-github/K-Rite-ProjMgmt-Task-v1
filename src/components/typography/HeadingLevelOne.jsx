@@ -7,8 +7,14 @@ const HeadingLevelOneTypography = styled.h1`
   margin: 0;
 `;
 
-const HeadingLevelOneText = ({ children }) => {
-  return <HeadingLevelOneTypography>{children}</HeadingLevelOneTypography>;
+const HeadingLevelOneText = ({ children, dimmed }) => {
+  return (
+    <HeadingLevelOneTypography
+      style={{ color: dimmed ? "var(--dimmed)" : "var(--heading-font-color)" }}
+    >
+      {children}
+    </HeadingLevelOneTypography>
+  );
 };
 
 export default HeadingLevelOneText;

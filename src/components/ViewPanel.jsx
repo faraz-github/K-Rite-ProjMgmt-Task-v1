@@ -30,10 +30,10 @@ const ViewPanel = () => {
         <HeadingLevelOneText>Products</HeadingLevelOneText>
         <HorizontalStack gap="10px">
           <Search />
-          <IconOnlyButton onClick={() => alert("Add OnClick")}>
+          <IconOnlyButton outlined onClick={() => alert("Add OnClick")}>
             <FaComments />
           </IconOnlyButton>
-          <IconOnlyButton onClick={() => alert("Add OnClick")}>
+          <IconOnlyButton outlined onClick={() => alert("Add OnClick")}>
             <FaCog />
           </IconOnlyButton>
         </HorizontalStack>

@@ -2,17 +2,21 @@ import styled from "styled-components";
 
 const IconOnlyPressButton = styled.button`
   background-color: var(--white);
-  border: none;
   padding: 8px;
   cursor: pointer;
   border-radius: var(--surface-radius);
+  border: none;
   outline: none;
-  box-shadow: var(--outline-shadow);
 `;
 
-const IconOnlyButton = ({ children, onClick }) => {
+const IconOnlyButton = ({ children, onClick, outlined }) => {
   return (
-    <IconOnlyPressButton onClick={onClick}>{children}</IconOnlyPressButton>
+    <IconOnlyPressButton
+      style={{ boxShadow: outlined ? "var(--outline-shadow)" : "none" }}
+      onClick={onClick}
+    >
+      {children}
+    </IconOnlyPressButton>
   );
 };
 

@@ -1,9 +1,26 @@
 import styled from "styled-components";
+import Image from "next/image";
 
 import Header from "./Header";
 import DashboardTitle from "./header-components/DashboardTitle";
 import Avatar from "./ui-components/Avatar";
-import Image from "next/image";
+import Teams from "./header-components/Teams";
+import IconAndTitleText from "./ui-components/IconAndTitleText";
+import HeadingLevelThreeText from "./typography/HeadingLevelThree";
+import Shortcut from "./ui-components/Shortcut";
+import IconOnlyButton from "./ui-components/IconOnlyButton";
+
+import { FaShoppingBag } from "react-icons/fa";
+import { FaBezierCurve } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
+import { FaPlusSquare } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
+
+const FlexDivCenterSpaceBetween = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 
 const SidePanelContainer = styled.div`
   width: 25%;
@@ -39,6 +56,41 @@ const SidePanel = ({ isOpen }) => {
           />
         </Avatar>
       </Header>
+      <>
+        <Teams padding="8px">
+          <IconAndTitleText>
+            <FaBezierCurve />
+            <HeadingLevelThreeText>Design Team</HeadingLevelThreeText>
+          </IconAndTitleText>
+          <Shortcut keyOne={"#"} operatorKey={"+"} keyTwo={"A"} />
+        </Teams>
+        <Teams padding="8px">
+          <IconAndTitleText>
+            <FaShoppingBag />
+            <HeadingLevelThreeText>Marketing Team</HeadingLevelThreeText>
+          </IconAndTitleText>
+          <Shortcut keyOne={"#"} operatorKey={"+"} keyTwo={"A"} />
+        </Teams>
+        <Teams padding="8px">
+          <IconAndTitleText>
+            <FaCode />
+            <HeadingLevelThreeText>Development Team</HeadingLevelThreeText>
+          </IconAndTitleText>
+          <Shortcut keyOne={"#"} operatorKey={"+"} keyTwo={"A"} />
+        </Teams>
+        <Teams padding="8px" dimmed>
+          <IconAndTitleText>
+            <FaPlusSquare />
+            <HeadingLevelThreeText dimmed>Create a team</HeadingLevelThreeText>
+          </IconAndTitleText>
+        </Teams>
+      </>
+      <FlexDivCenterSpaceBetween style={{ padding: "8px" }}>
+        <HeadingLevelThreeText dimmed>FOLDERS</HeadingLevelThreeText>
+        <IconOnlyButton onClick={() => alert("Add OnClick")}>
+          <FaPlus color="var(--dimmed)" />
+        </IconOnlyButton>
+      </FlexDivCenterSpaceBetween>
     </SidePanelContainer>
   );
 };
