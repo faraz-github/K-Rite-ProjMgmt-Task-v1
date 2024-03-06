@@ -6,6 +6,34 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --debug-border: 1px dashed red;
+
+  --surface-color: #ffffff;
+  --surface-border: #eceff1;
+  --shortcut-bg: #cfd8dc;
+  --dimmed: #bdbdbd;
+  --padding: 8px;
+  --surface-radius: 8px;
+  --surface-gap: 8px;
+
+  --surface-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+  --outline-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+  --white: #ffffff;
+
+  --heading-font-color: #263238;
+
+  --overline-font-size: 10px;
+  --overline-font-color: #607d8b;
+
+  --headinglevelone-font-size: 20px;
+
+  --headingleveltwo-font-size: 16px;
+
+  --headinglevelthree-font-size: 14px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,13 +45,6 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {

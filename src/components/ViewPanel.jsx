@@ -9,6 +9,7 @@ import IconOnlyButton from "./ui-components/IconOnlyButton";
 import { FaComments } from "react-icons/fa";
 import { FaCog } from "react-icons/fa";
 import ViewPanelController from "./viewpanel-components/ViewPanelController";
+import Table from "./Table";
 
 const ViewPanelContainer = styled.div`
   width: 100%;
@@ -18,6 +19,7 @@ const ViewPanelContainer = styled.div`
   margin-left: 0;
   box-shadow: var(--surface-shadow);
   padding: var(--padding);
+  overflow: scroll;
 
   @media screen and (max-width: 600px) {
     margin: 0;
@@ -40,6 +42,7 @@ const ViewPanel = () => {
         </HorizontalStack>
       </Header>
       <ViewPanelController />
+      <Table />
     </ViewPanelContainer>
   );
 };
