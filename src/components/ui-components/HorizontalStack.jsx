@@ -5,9 +5,14 @@ const HorizontalStackContainer = styled.div`
   flex-direction: row;
 `;
 
-const HorizontalStack = ({ children, gap }) => {
+const HorizontalStack = ({ children, gap, center }) => {
   return (
-    <HorizontalStackContainer style={{ gap: gap ? gap : "0" }}>
+    <HorizontalStackContainer
+      style={{
+        gap: gap ? gap : "0",
+        alignItems: center ? "center" : "flex-start",
+      }}
+    >
       {children}
     </HorizontalStackContainer>
   );
