@@ -8,6 +8,7 @@ import IconOnlyButton from "./ui-components/IconOnlyButton";
 
 import { FaComments } from "react-icons/fa";
 import { FaCog } from "react-icons/fa";
+import ViewPanelController from "./viewpanel-components/ViewPanelController";
 
 const ViewPanelContainer = styled.div`
   width: 100%;
@@ -31,13 +32,14 @@ const ViewPanel = () => {
         <HorizontalStack gap="10px">
           <Search />
           <IconOnlyButton outlined onClick={() => alert("Add OnClick")}>
-            <FaComments />
+            <FaComments color="var(--heading-font-color)" />
           </IconOnlyButton>
           <IconOnlyButton outlined onClick={() => alert("Add OnClick")}>
-            <FaCog />
+            <FaCog color="var(--heading-font-color)" />
           </IconOnlyButton>
         </HorizontalStack>
       </Header>
+      <ViewPanelController />
     </ViewPanelContainer>
   );
 };
